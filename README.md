@@ -12,7 +12,7 @@ A Model Context Protocol (MCP) server for integrating AppsFlyer analytics data w
 ## Installation
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/ysntony/appsflyer-mcp
 cd appsflyer-mcp
 uv sync
 ```

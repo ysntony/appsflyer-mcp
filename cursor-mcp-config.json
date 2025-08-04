@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "appsflyer": {
+      "command": "uv",
+      "args": ["run", "python", "-m", "appsflyer_mcp"],
+      "env": {
+        "APPSFLYER_API_BASE_URL": "https://hq1.appsflyer.com",
+        "APPSFLYER_TOKEN": "your_api_token_here"
+      }
+    }
+  }
+} 

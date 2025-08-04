@@ -1,0 +1,61 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "appsflyer-mcp"
+version = "0.1.0"
+authors = [
+  { name = "Yu Shengnan", email = "yushengnan0525@gmail.com" },
+]
+description = "Model Context Protocol (MCP) plugin for AppsFlyer API integration"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+keywords = ["appsflyer", "mcp", "api", "analytics", "mobile-attribution", "model-context-protocol"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+]
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.12.3",
+    "python-dotenv>=1.1.1",
+    "pydantic>=2.0.0",
+]
+
+[project.scripts]
+appsflyer-mcp = "appsflyer_mcp.main:cli"
+
+[project.urls]
+Homepage = "https://github.com/ysntony/appsflyer-mcp"
+Repository = "https://github.com/ysntony/appsflyer-mcp"
+Documentation = "https://github.com/ysntony/appsflyer-mcp#readme"
+"Bug Tracker" = "https://github.com/ysntony/appsflyer-mcp/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+    "twine>=4.0.0",
+    "build>=1.0.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["appsflyer_mcp"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/appsflyer_mcp",
+    "/README.md",
+    "/LICENSE",
+    "/pyproject.toml",
+]

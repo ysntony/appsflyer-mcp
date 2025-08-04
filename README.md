@@ -2,6 +2,10 @@
 
 A Model Context Protocol (MCP) server for integrating AppsFlyer analytics data with AI assistants.
 
+<a href="https://glama.ai/mcp/servers/@ysntony/appsflyer-mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@ysntony/appsflyer-mcp/badge" alt="AppsFlyer Server MCP server" />
+</a>
+
 ## Features
 
 - Fetch aggregate data reports from AppsFlyer Pull API
@@ -84,9 +88,3 @@ pytest
 ## License
 
 MIT License
-
-
-
-
-
-
